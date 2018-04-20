@@ -3,24 +3,24 @@ extends layout
 block content
   .wrapper
     .banner
-      h1 HiChat :)
+      h1 Hi :)
       span#status
     #historyMsg
     .controls
       .items
         input#colorStyle(type='color', placeholder='#000', title='font color')
-        input#emoji(type='button', value='emoji', title='emoji')
+        input#emoji(type='button', value='表情', title='emoji')
         label.imageLable(for='sendImage')
-          input(type='button', value='image')
+          input(type='button', value='图片')
           input#sendImage(type='file', value='image')
         input#clearBtn(type='button', value='clear', title='clear screen')
-      textarea#messageInput(placeholder='enter to send')
-      input#sendBtn(type='button', value='SEND')
+      textarea#messageInput(placeholder='按Enter发送')
+      input#sendBtn(type='button', value='发送')
       #emojiWrapper
   #loginWrapper
-    p#info connecting to server...
+    p#info 连接中...
     #nickWrapper
-      input#nicknameInput(type='text', placeholder='nickname')
+      input#nicknameInput(type='text', placeholder='昵称')
       input#loginBtn(type='button', value='OK')
   script(src='/socket.io/socket.io.js')
   script(src='/javascripts/hichat.js')
